@@ -1,0 +1,30 @@
+﻿@model D_Grabowski_PartyInvitationMVC.Models.PartyResponse
+
+@{
+    ViewBag.Title = "ThankYou";
+}
+
+<h1>Tom's Birthday Party!</h1>
+
+<div style="text-align:center">
+    @* Here we display the greeting followed by the name of the user *@
+    <h2 style="background-color:burlywood"> @ViewBag.Greetings @Model.Name</h2>
+
+    <br />
+    <br />
+    <hr />
+    <h3 style="background-color:bisque; text-align:center">Thank you very much for your response!</h3>
+
+    @* if the user can attend the party *@
+    @if (Model.CanMakeIt == true)
+    {
+        @:Oh I am happy to hear that you will attend my party
+        <br /><img src="~/Images/happykitty.jpg" />
+    }
+    else
+    {
+        @:Sorry! Maybe we can have a drink later
+        <br /><img src="~/Images/cryingkitty.jpg" />
+    }
+</div>
+

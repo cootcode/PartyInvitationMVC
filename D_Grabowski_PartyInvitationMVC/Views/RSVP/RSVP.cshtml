@@ -1,0 +1,54 @@
+﻿@model D_Grabowski_PartyInvitationMVC.Models.PartyResponse
+@{
+    ViewBag.Title = "RSVP";
+}
+
+<h2>RSVP</h2>
+<style>
+    .spacer {
+        margin-top: 2em;
+    }
+</style>
+
+<div>
+    <h1>Tom's Birthday Party</h1>
+
+    <h3> Please enter your details: </h3>
+
+    @using (Html.BeginForm())
+    {
+        <div class="row" style="margin-left:auto">
+
+            <p class="spacer"><label>Name</label></p>
+            @Html.EditorFor(m => m.Name)
+
+
+            <p class="spacer"><label>Phone</label></p>
+            @Html.EditorFor(m => m.Phone)
+
+
+            <p class="spacer"><label>Email</label></p>
+            @Html.EditorFor(m => m.Email)
+
+
+
+            <p class="spacer"><label>Will you attend the party?</label></p>
+
+            @Html.DropDownListFor(m => m.CanMakeIt,
+                    new[]{
+                        new SelectListItem
+                        {
+                            Text = "I would like to attend the party",
+                            Value = bool.TrueString },
+                        new SelectListItem
+                        {
+                            Text = "Sorry, I am too busy",
+                            Value = bool.FalseString }
+
+                    })
+
+            <p><input type="submit" value="Respond to the invitation" /></p>
+        </div>
+            }
+
+</div>

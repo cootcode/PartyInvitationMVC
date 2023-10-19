@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Tom's Birthday Party Invitation'</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/Images/party_hat.png" class="img-responsive"/>
+    </div>
+
+
+    <div class="col-md-4">
+        <h2>Let's Have Fun!</h2>
+        <p>Please join us to celebrate Tom's 21st Birthday with an evening of dinner and dancing on Friday, 28th June from 7:00 pm at The Crafty Pig Restaurant.</p>
+
+        <p>Let us know if you can join the party before 20th March </p>
+    </div>
+    <div class="col-md-4">
+        <h2> RSVP</h2>
+        <p>Let us know before 1st June if you can make it by clicking this link</p><br />
+        <p>@Html.ActionLink("Répondez š'il vous plaît", "RSVP", "RSVP")</p>
+    </div>
+
+</div>
